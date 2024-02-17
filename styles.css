@@ -1,0 +1,145 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg--90: #514e4e;
+  --bg--60: #7c7979;
+  --bg--60-5: #d1d0d0;
+  --bg--30: #eff5ee;
+  --bg--30-5: #e2cdb4;
+  --bg--10: #05aed5;
+  --bg-10-5: #30cbed;
+  --bg-after: #edb67d;
+  --bg-hover: #fddaa4;
+}
+
+body {
+  background: var(--bg--60);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#home-page {
+  height: 100vh;
+  background-image: url("images/bg-home.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.navbar-nav li {
+  display: flex;
+  justify-content: center;
+  padding: 0 10px;
+}
+
+.navbar-nav li .nav-link {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--bg--30);
+  position: relative;
+}
+
+.navbar-nav li .nav-link::after {
+  content: "";
+  height: 5px;
+  width: 0;
+  background: var(--bg-after);
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  transition: 0.4s;
+}
+
+.navbar-nav li .nav-link:hover::after {
+  width: 100%;
+}
+
+.navbar-nav li .nav-link:hover {
+  color: var(--bg-hover);
+}
+
+.navbar-brand {
+  font-size: 2.3rem;
+  padding: 5px 10px;
+}
+
+.h1-name {
+  color: #fff;
+}
+
+.h1-name span {
+  color: tomato;
+  font-weight: 800;
+}
+
+.webd {
+  color: #fff;
+  font-weight: 900;
+  letter-spacing: 8px;
+}
+
+#home-contact-btn {
+  color: #fff;
+  width: 150px;
+  background: tomato;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+#home-contact-btn:hover {
+  background: var(--bg--30-5);
+  color: #262626;
+}
+
+@media screen and (max-width: 991px) {
+  body {
+    background: #7d7676;
+  }
+
+  #home-page {
+    height: 100vh;
+    background-image: url("images/wc.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .navbar-nav {
+    /* display: none; */
+    height: 400px;
+    background: rgba(125, 118, 118, 0.8);
+    position: absolute;
+    top: 80px;
+    left: -12px;
+  }
+
+  .navbar-nav li {
+    width: 100vw;
+    padding: 10px 0;
+  }
+
+  .navbar-nav li:hover {
+    background: #9e9696;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .h1-name {
+    font-size: 1.5rem;
+  }
+  .webd {
+    color: #fff;
+    font-weight: 900;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+  }
+
+  #home-contact-btn {
+    width: 110px;
+    font-size: 0.8rem;
+    font-weight: 300;
+    margin-top: 0;
+  }
+}
