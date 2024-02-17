@@ -126,6 +126,14 @@ body {
 }
 
 @media screen and (max-width: 768px) {
+  #home-page {
+    height: 100vh;
+    background-image: url("images/wc.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
   .h1-name {
     font-size: 1.5rem;
   }
@@ -141,5 +149,15 @@ body {
     font-size: 0.8rem;
     font-weight: 300;
     margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #home-page {
+    height: 100vh;
+    background-image: url("images/wc.png");
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 }
