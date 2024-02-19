@@ -60,18 +60,46 @@ body {
   color: var(--bg-hover);
 }
 
+.navbar-nav li .nav-link:focus {
+  color: var(--bg-hover);
+}
+
+#active-nav {
+  color: var(--bg-after);
+}
+/* *{
+  border: 1px solid ;
+} */
 .navbar-brand {
-  font-size: 2.3rem;
+  font-size: 1.5rem;
   padding: 5px 10px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: #fff;
+}
+
+.navbar-brand:focus,
+.navbar-brand:hover {
+  color: var(--bg-hover);
 }
 
 .h1-name {
   color: #fff;
 }
 
-.h1-name span {
+#name-animation {
   color: tomato;
   font-weight: 800;
+  animation: fadeIn 0.8s infinite alternate;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .webd {
