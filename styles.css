@@ -14,8 +14,11 @@
   --bg-10-5: #30cbed;
   --bg-after: #edb67d;
   --bg-hover: #fddaa4;
+  --bg-body: #7d7676;
 }
-
+body {
+  background: var(--bg-body);
+}
 body {
   background: var(--bg--60);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -67,9 +70,7 @@ body {
 #active-nav {
   color: var(--bg-after);
 }
-/* *{
-  border: 1px solid ;
-} */
+
 .navbar-brand {
   font-size: 1.5rem;
   padding: 5px 10px;
@@ -121,11 +122,199 @@ body {
   color: #262626;
 }
 
-@media screen and (max-width: 991px) {
-  body {
-    background: #7d7676;
-  }
+#scrollToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #048c96;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  line-height: 50px;
+  text-align: center;
+  cursor: pointer;
+  display: none; /* Initially hide the icon */
+  transition: 0.5s;
+  z-index: 4;
+}
 
+#scrollToTop:hover {
+  box-shadow: 0 0 20px #68f6ff;
+  border: 1px solid #fff;
+}
+
+/* --About Page-- */
+#about-page {
+  height: 100vh;
+  width: 100%;
+  background: #262626;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about {
+  width: 100%;
+}
+
+.head-title {
+  font-weight: 600;
+  font-size: 3rem;
+  color: var(--bg-after);
+}
+
+.about-image-div img {
+  max-width: 100%;
+  max-height: 100%;
+  background-size: cover;
+  box-shadow: 5px 5px 10px var(--bg--90);
+}
+
+.about-text {
+  padding: 20px;
+  color: #fff;
+}
+
+.about-p {
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.1rem;
+  text-align: justify;
+  text-indent: 40px;
+  line-height: 30px;
+}
+
+.about-p #certificate-btn {
+  text-decoration: underline #fff;
+  color: #68f6ff;
+  cursor: pointer;
+}
+
+.p-Bnt {
+  border: none;
+  color: tomato;
+  background: none;
+  font-size: 0.9rem;
+  text-decoration: underline;
+}
+
+.see-more {
+  display: none;
+  margin-top: 20px;
+}
+
+.cert-container {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #000;
+  z-index: 6;
+}
+.sub-certificate-cont {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#close {
+  font-size: 60px;
+  color: rgb(247, 125, 125);
+  transition: 0.3s;
+  position: absolute;
+  right: 15%;
+  top: 10%;
+}
+#close:hover {
+  color: red;
+  text-shadow: 1px 1px 20px #6edee7;
+}
+
+.sub-certificate-cont img {
+  width: 60%;
+}
+
+.tab-titles {
+  display: flex;
+  margin: 20px 0 20px;
+}
+
+.tab-links {
+  margin-right: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+}
+
+.tab-links::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: var(--bg-after);
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.5s;
+}
+
+.tab-links:hover::after {
+  width: 100%;
+}
+
+.tab-links.active-link::after {
+  width: 50%;
+}
+
+.tab-contents ul li {
+  list-style: none;
+  font-size: 1rem;
+  margin: 10px 0;
+  margin-left: -30px;
+}
+.tab-contents ul li span {
+  color: var(--bg-hover);
+  font-size: 1.1rem;
+}
+
+.tab-contents {
+  display: none;
+}
+
+.tab-contents.active-tab {
+  display: block;
+}
+
+/* --end of about-- */
+* {
+  /* border: 1px solid #fff; */
+}
+#services-page {
+  height: 100vh;
+  width: 100%;
+  background: var(--bg--30);
+}
+#portfolio-page {
+  height: 100vh;
+  width: 100%;
+  background: var(--bg--60);
+}
+#contact-page {
+  height: 100vh;
+  width: 100%;
+  background: var(--bg-hover);
+}
+
+/* --small screens-- */
+@media screen and (max-width: 991px) {
   #home-page {
     height: 100vh;
     background-image: url("images/wc.png");
