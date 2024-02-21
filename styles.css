@@ -24,9 +24,14 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-#home-page {
+.pages {
+  width: 100%;
   height: 100vh;
-  background-image: url("images/bg-home.png");
+  background: #262626;
+}
+
+#home-page {
+  background-image: url("images/finale-bg.png");
   background-position: center;
   background-size: cover;
 }
@@ -35,6 +40,7 @@ body {
   display: flex;
   justify-content: center;
   padding: 0 10px;
+  height: 10%;
 }
 
 .navbar-nav li .nav-link {
@@ -84,6 +90,11 @@ body {
   color: var(--bg-hover);
 }
 
+#home-content {
+  width: 100%;
+  height: 90%;
+}
+
 .h1-name {
   color: #fff;
 }
@@ -126,7 +137,7 @@ body {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #048c96;
+  background-color: var(--bg-after);
   color: #fff;
   border: none;
   border-radius: 50%;
@@ -142,22 +153,24 @@ body {
 }
 
 #scrollToTop:hover {
-  box-shadow: 0 0 20px #68f6ff;
+  box-shadow: 0 0 20px tomato;
   border: 1px solid #fff;
 }
 
 /* --About Page-- */
 #about-page {
-  height: 100vh;
-  width: 100%;
-  background: #262626;
-  overflow: hidden;
+  position: relative;
+}
+.about {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#about-row {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.about {
-  width: 100%;
 }
 
 .head-title {
@@ -293,38 +306,101 @@ body {
   display: block;
 }
 
-/* --end of about-- */
-* {
-  /* border: 1px solid #fff; */
-}
+/* --Services-- */
+
 #services-page {
-  height: 100vh;
   width: 100%;
-  background: var(--bg--30);
+  height: 100vh;
+  padding: 30px 0;
 }
+
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+
+.services-list div {
+  background: var(--bg-body);
+  padding: 40px;
+  font-size: 13px;
+  font-weight: 300;
+  border-radius: 10px;
+  transition: background 0.5s, transform 0.5s;
+}
+
+.services-list div i {
+  font-size: 50px;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.services-list div p {
+  color: #fff;
+}
+
+.services-list div h2 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  color: #fff;
+}
+.services-list div:hover {
+  background: var(--bg-after);
+  transform: translateY(-10px);
+}
+
+.services-list div a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+/* --Services-- */
 #portfolio-page {
   height: 100vh;
   width: 100%;
   background: var(--bg--60);
 }
+
+.project-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 #contact-page {
   height: 100vh;
   width: 100%;
   background: var(--bg-hover);
 }
-
+* {
+  border: 1px solid #fff;
+}
 /* --small screens-- */
 @media screen and (max-width: 991px) {
   #home-page {
     height: 100vh;
-    background-image: url("images/wc.png");
+    background-image: url("images/finale-bg.png");
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
   }
 
   .navbar-nav {
-    /* display: none; */
     height: 400px;
     background: rgba(125, 118, 118, 0.8);
     position: absolute;
@@ -345,8 +421,8 @@ body {
 @media screen and (max-width: 768px) {
   #home-page {
     height: 100vh;
-    background-image: url("images/wc.png");
-    background-position: center;
+    background-image: url("images/finale-small.png");
+    background-position: bottom;
     background-size: contain;
     background-repeat: no-repeat;
   }
@@ -372,9 +448,9 @@ body {
 @media screen and (max-width: 768px) {
   #home-page {
     height: 100vh;
-    background-image: url("images/wc.png");
-    background-position: top center;
-    background-size: cover;
+    background-image: url("images/finale-small.png");
+    background-position: bottom;
+    background-size: contain;
     background-repeat: no-repeat;
   }
 }

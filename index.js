@@ -41,7 +41,6 @@ moreBtn.addEventListener("click", () => {
   seeMore.style.display = "block";
   // seeMore.style.textIndent = "0";
   moreBtn.style.display = "none";
-  moreBtn.style.transition = "0.5s";
   tabCont.style.display = "none";
 });
 
@@ -84,3 +83,88 @@ closeBtn.addEventListener("click", () => {
 });
 
 // end of about me tabs for skills
+
+// --services--
+
+// --portfolio--
+const newTab = "_blank";
+const cardData = [
+  {
+    src: "paw.png",
+    title: "PawFriend",
+    link: "https://eugeneesperas05.github.io/pawfriend/",
+  },
+  {
+    src: "rockpaper.png",
+    title: "Rock Paper Scissor",
+    link: "https://eugeneesperas05.github.io/rockpaper/",
+  },
+  {
+    src: "travelph.png",
+    title: "TravelPH",
+    link: "https://eugeneesperas.github.io/",
+  },
+  {
+    src: "calc.png",
+    title: "Simple Calculator",
+    link: "https://eugeneesperas05.github.io/simple-calculator/",
+  },
+  {
+    src: "paw.png",
+    title: "PawFriend",
+    link: "https://eugeneesperas05.github.io/fakestoreapi/",
+  },
+  {
+    src: "paw.png",
+    title: "tictactoe",
+    link: "https://eugeneesperas05.github.io/personal-portfolio/",
+  },
+  {
+    src: "paw.png",
+    title: "PawFriend",
+    link: "https://eugeneesperas05.github.io/personal-portfolio/",
+  },
+  {
+    src: "paw.png",
+    title: "TravelPh",
+    link: "https://eugeneesperas05.github.io/personal-portfolio/",
+  },
+  {
+    src: "paw.png",
+    title: "tictactoe",
+    link: "https://eugeneesperas05.github.io/personal-portfolio/",
+  },
+  {
+    src: "paw.png",
+    title: "PawFriend",
+    link: "https://eugeneesperas05.github.io/personal-portfolio/",
+  },
+];
+
+cardData.map((item) => {
+  const cardRow = document.querySelector(".project-container");
+  const card = document.createElement("div");
+  const cardBody = document.createElement("div");
+  const cardImg = document.createElement("img");
+  const cardCol = document.createElement("div");
+
+  cardCol.classList.add("col-lg-2");
+  cardCol.classList.add("col-md-3");
+  cardCol.classList.add("col-sm-6");
+  cardCol.classList.add("col-portfolio");
+
+  card.classList.add("card");
+  cardBody.classList.add("card-body");
+  cardImg.classList.add("card-img-top");
+  cardImg.src = `images/${item.src}`;
+
+  cardBody.innerHTML = `<h5 class="card-title">
+                          ${item.title}
+                        </h5>
+                        <a href="${item.link}" ${newTab} class="btn btn-primary">view</a>`;
+
+  cardRow.appendChild(cardCol);
+  cardCol.appendChild(card);
+  card.appendChild(cardImg);
+  card.appendChild(cardBody);
+});

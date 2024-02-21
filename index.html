@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div class="container-fluid" id="home-page">
+    <div class="container-fluid pages" id="home-page">
       <nav class="navbar navbar-expand-lg">
         <div class="container">
           <a class="navbar-brand" href="#">uJin</a>
@@ -60,35 +60,23 @@
         </div>
       </nav>
 
-      <div class="container h-75">
-        <div class="row">
-          <div class="col-12">
-            <div class="row" style="height: 45vh"></div>
-          </div>
-          <div class="col-12">
-            <div class="row" style="height: 45vh">
-              <div class="col-3"></div>
-              <div class="col-4"></div>
-              <div class="col-5">
-                <div
-                  class="row"
-                  style="border-left: 5px solid #fff; padding-left: 10px"
-                >
+      <div class="container" id="home-content">
+        <div class="row" style="height: 100%">
+          <div class="col-6"></div>
+          <div class="col-6">
+            <div class="row" style="height: 45%"></div>
+            <div class="row" style="height: 20%">
+              <div class="col-12 d-flex flex-column justify-content-center">
+                <div class="row" style="height: 33.33%">
                   <h1 class="h1-name">
                     I'm
                     <span id="name-animation">Eugene</span>
                   </h1>
                 </div>
-                <div
-                  class="row"
-                  style="border-left: 5px solid #fff; padding-left: 10px"
-                >
+                <div class="row" style="height: 33.33%">
                   <p class="webd">Web Developer</p>
                 </div>
-                <div
-                  class="row"
-                  style="border-left: 5px solid #fff; padding-left: 20px"
-                >
+                <div class="row" style="height: 33.33%">
                   <button
                     type="button"
                     class="btn fw-bold"
@@ -99,9 +87,7 @@
                 </div>
               </div>
             </div>
-          </div>
-          <div class="col-12">
-            <div class="row"></div>
+            <div class="row" style="height: 35%"></div>
           </div>
         </div>
       </div>
@@ -113,15 +99,16 @@
     </div>
 
     <!-- -- about -- -->
-    <div class="container-fluid" id="about-page">
+
+    <div class="container-fluid pages" id="about-page">
       <div class="container about">
-        <div class="row">
-          <div class="col-4">
-            <div class="container about-image-div">
-              <img src="images/new.jpg" alt="" />
+        <div class="row" id="about-row">
+          <div class="col col-lg-4 col-md-12 col-sm-12">
+            <div class="card">
+              <img src="images/new.jpg" class="card-img-top" alt="..." />
             </div>
           </div>
-          <div class="col-8 about-text">
+          <div class="col col-lg-8 col-md-12 col-sm-12 about-text">
             <h1 class="head-title">About me</h1>
             <p class="about-p">
               I graduated from Tarlac State University with a Bachelor of
@@ -230,15 +217,60 @@
         </div>
       </div>
     </div>
-    <!-- <div class="container-fluid" id="services-page">
-      <div class="container"></div>
+
+    <!-- -- services -- -->
+    <div class="container-fluid pages" id="services-page">
+      <div class="container">
+        <h1 class="head-title">Services</h1>
+        <div class="services-list">
+          <div>
+            <i class="fa-solid fa-code"></i>
+            <h2>Web Design</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Praesentium, sit labore itaque omnis obcaecati voluptates dolores
+              commodi ex architecto sapiente alias minima quisquam perferendis
+              numquam amet similique? Consequatur, sapiente aut!
+            </p>
+            <a href="#">Learn more</a>
+          </div>
+
+          <div>
+            <i class="fa-solid fa-crop"></i>
+            <h2>Web Design</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Praesentium, sit labore itaque omnis obcaecati voluptates dolores
+              commodi ex architecto sapiente alias minima quisquam perferendis
+              numquam amet similique? Consequatur, sapiente aut!
+            </p>
+            <a href="#">Learn more</a>
+          </div>
+
+          <div>
+            <i class="fa-brands fa-app-store"></i>
+            <h2>Web Design</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Praesentium, sit labore itaque omnis obcaecati voluptates dolores
+              commodi ex architecto sapiente alias minima quisquam perferendis
+              numquam amet similique? Consequatur, sapiente aut!
+            </p>
+            <a href="#">Learn more</a>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <!-- -- portfolio -- -->
     <div class="container-fluid" id="portfolio-page">
-      <div class="container"></div>
+      <div class="row card-row project-container" style="height: 100%">
+        <!-- dynamically added here -->
+      </div>
     </div>
-    <div class="container-fluid" id="contact-page">
-      <div class="container"></div>
-    </div> -->
+
+    <!-- -- contact -- -->
+    <div class="container-fluid" id="contact-page"></div>
 
     <script src="index.js"></script>
     <script
