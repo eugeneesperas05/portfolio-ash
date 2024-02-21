@@ -129,16 +129,6 @@ const cardData = [
     title: "TravelPh",
     link: "https://eugeneesperas05.github.io/personal-portfolio/",
   },
-  {
-    src: "paw.png",
-    title: "tictactoe",
-    link: "https://eugeneesperas05.github.io/personal-portfolio/",
-  },
-  {
-    src: "paw.png",
-    title: "PawFriend",
-    link: "https://eugeneesperas05.github.io/personal-portfolio/",
-  },
 ];
 
 cardData.map((item) => {
@@ -148,12 +138,13 @@ cardData.map((item) => {
   const cardImg = document.createElement("img");
   const cardCol = document.createElement("div");
 
-  cardCol.classList.add("col-lg-2");
+  cardCol.classList.add("col-lg-3");
   cardCol.classList.add("col-md-3");
   cardCol.classList.add("col-sm-6");
   cardCol.classList.add("col-portfolio");
 
   card.classList.add("card");
+  card.classList.add("card-portfolio");
   cardBody.classList.add("card-body");
   cardImg.classList.add("card-img-top");
   cardImg.src = `images/${item.src}`;
@@ -161,7 +152,7 @@ cardData.map((item) => {
   cardBody.innerHTML = `<h5 class="card-title">
                           ${item.title}
                         </h5>
-                        <a href="${item.link}" ${newTab} class="btn btn-primary">view</a>`;
+                        <a href="${item.link}" target="${newTab}" class="btn btn-view">view</a>`;
 
   cardRow.appendChild(cardCol);
   cardCol.appendChild(card);
