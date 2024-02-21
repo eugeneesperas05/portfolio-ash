@@ -328,6 +328,16 @@ body {
   color: #666;
 }
 
+.carousel-item img {
+  max-height: 300px; /* Adjust the maximum height of the images */
+  width: auto; /* Maintain aspect ratio */
+  margin: 0 auto; /* Center the images horizontally */
+}
+
+#carousel-container {
+  margin-top: 50px;
+}
+
 /* --portfolio-- */
 #portfolio-page {
   height: 100vh;
@@ -485,11 +495,6 @@ form .btn2 {
   .head-title {
     font-size: 2.2rem;
   }
-  .about-card {
-  }
-
-  .about-image {
-  }
 
   .about-p {
     font-size: 1rem;
@@ -529,6 +534,11 @@ form .btn2 {
 }
 
 @media screen and (max-width: 768px) {
+  .home-contact-btn {
+    margin-top: -35px;
+    margin-left: 10px;
+  }
+
   #home-page {
     height: 100vh;
     background-image: url("images/finale-small.png");
@@ -592,7 +602,7 @@ form .btn2 {
   .tab-titles p {
     font-size: 0.9rem;
   }
-  
+
   .tab-contents ul li {
     margin-left: -25px;
   }
@@ -606,39 +616,67 @@ form .btn2 {
     padding-top: 200px;
   }
 
-  
+  #carousel-container {
+    margin-top: 50px;
+  }
+
+  #portfolio-page {
+    padding-top: 300px;
+  }
+
+  .contact-left {
+    flex-basis: 50%;
+  }
+
+  .contact-right {
+    flex-basis: 50%;
+  }
+
+  .contact-left p {
+    font-size: 12px;
+  }
+
+  .contact-left p i {
+    color: var(--bg-hover);
+    font-size: 15px;
+  }
+
+  .social-icons {
+    margin-top: 20px;
+  }
+
+  .social-icons a {
+    font-size: 25px;
+    margin-right: 5px;
+  }
+
+  form input,
+  form textarea {
+    width: 100%;
+    padding: 2px 0;
+    font-size: 15px;
+  }
+
+  form .btn2 {
+    padding: 10px 60px;
+    font-size: 12px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
 }
 
 @media screen and (max-width: 576px) {
-  .head-title {
-    font-size: 2.2rem;
+  .home-contact-btn {
+    margin-top: -35px;
+    margin-left: 10px;
   }
 
-  .about-card {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 200px;
+  #portfolio-page {
+    padding-top: 750px;
   }
 
-  .about-image {
+  #contact-page {
+    padding-top: 410px;
+    height: 130vh;
   }
-
-  .about-p {
-    font-size: 1rem;
-    line-height: 25px;
-  }
-  .tab-titles p {
-    font-size: 0.9rem;
-  }
-  .tab-contents ul {
-    margin-top: -20px;
-  }
-  .tab-contents ul li span {
-    font-size: 0.9rem;
-  }
-}
-
-* {
-  /* border: 1px solid red; */
 }

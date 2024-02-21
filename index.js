@@ -119,16 +119,6 @@ const cardData = [
     title: "tictactoe",
     link: "https://eugeneesperas05.github.io/personal-portfolio/",
   },
-  {
-    src: "paw.png",
-    title: "PawFriend",
-    link: "https://eugeneesperas05.github.io/personal-portfolio/",
-  },
-  {
-    src: "paw.png",
-    title: "TravelPh",
-    link: "https://eugeneesperas05.github.io/personal-portfolio/",
-  },
 ];
 
 cardData.map((item) => {
