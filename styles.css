@@ -666,6 +666,13 @@ form .btn2 {
 }
 
 @media screen and (max-width: 576px) {
+  #home-page {
+    height: 100vh;
+    background-image: url("images/finale-small.png");
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
   .home-contact-btn {
     margin-top: -35px;
     margin-left: 10px;
@@ -679,6 +686,18 @@ form .btn2 {
     padding-top: 410px;
     height: 130vh;
   }
+
+  .contact-left {
+    flex-basis: 100%;
+  }
+
+  .contact-right {
+    flex-basis: 100%;
+  }
+
+  .head-title {
+    font-size: 2rem;
+  }
 }
 
 @media screen and (max-width: 445px) {
@@ -687,20 +706,25 @@ form .btn2 {
     margin-left: 10px;
   }
 
+  .head-title {
+    font-size: 1.5rem;
+  }
+
   .about-p {
     font-size: 12px;
     line-height: 20px;
   }
+
   #services-page {
     margin-top: -80px;
   }
 
   #portfolio-page {
-    padding-top: 650px;
+    padding-top: 600px;
   }
 
   #contact-page {
-    padding-top: 300px;
-    height: 110vh;
+    padding-top: 320px;
+    height: 120vh;
   }
 }
