@@ -596,7 +596,7 @@ form .btn2 {
   }
 
   .about-p {
-    font-size: 1rem;
+    font-size: 0.9rem;
     line-height: 25px;
   }
   .tab-titles p {
@@ -622,6 +622,10 @@ form .btn2 {
 
   #portfolio-page {
     padding-top: 300px;
+  }
+
+  .card-body .card-title {
+    font-size: 12px;
   }
 
   .contact-left {
@@ -679,12 +683,12 @@ form .btn2 {
   }
 
   #portfolio-page {
-    padding-top: 750px;
+    padding-top: 650px;
   }
 
   #contact-page {
     padding-top: 410px;
-    height: 130vh;
+    height: 140vh;
   }
 
   .contact-left {
@@ -726,5 +730,11 @@ form .btn2 {
   #contact-page {
     padding-top: 320px;
     height: 120vh;
+  }
+}
+
+@media screen and (max-width: 435px) {
+  .row-home {
+    margin-top: 40px;
   }
 }
