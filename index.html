@@ -32,6 +32,7 @@
             aria-controls="navbarNav"
             aria-expanded="false"
             aria-label="Toggle navigation"
+            style="background: #fff"
           >
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -77,13 +78,14 @@
                   <p class="webd">Web Developer</p>
                 </div>
                 <div class="row" style="height: 33.33%">
-                  <button
+                  <a
+                    href="#contact-page"
                     type="button"
                     class="btn fw-bold"
                     id="home-contact-btn"
                   >
                     Contact Me
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
@@ -103,12 +105,18 @@
     <div class="container-fluid pages" id="about-page">
       <div class="container about">
         <div class="row" id="about-row">
-          <div class="col col-lg-4 col-md-12 col-sm-12">
-            <div class="card">
-              <img src="images/new.jpg" class="card-img-top" alt="..." />
+          <div
+            class="col-xl-4 col-lg-3 col-md-4 col-sm-8 d-flex justify-content-center"
+          >
+            <div class="card about-card">
+              <img
+                src="images/new.jpg"
+                class="img-fluid about-image"
+                alt="..."
+              />
             </div>
           </div>
-          <div class="col col-lg-8 col-md-12 col-sm-12 about-text">
+          <div class="col-xl-8 col-lg-9 col-md-8 col-sm-8 about-text">
             <h1 class="head-title">About me</h1>
             <p class="about-p">
               I graduated from Tarlac State University with a Bachelor of
@@ -221,45 +229,49 @@
     <!-- -- services -- -->
     <div class="container-fluid pages" id="services-page">
       <div class="container">
-        <h1 class="head-title">Services</h1>
-        <div class="services-list">
-          <div>
-            <i class="fa-solid fa-code"></i>
-            <h2>Web Design</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Praesentium, sit labore itaque omnis obcaecati voluptates dolores
-              commodi ex architecto sapiente alias minima quisquam perferendis
-              numquam amet similique? Consequatur, sapiente aut!
-            </p>
-            <a href="#">Learn more</a>
-          </div>
+        <h1 class="text-center">Our Services</h1>
+      </div>
 
-          <div>
-            <i class="fa-solid fa-crop"></i>
-            <h2>Web Design</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Praesentium, sit labore itaque omnis obcaecati voluptates dolores
-              commodi ex architecto sapiente alias minima quisquam perferendis
-              numquam amet similique? Consequatur, sapiente aut!
-            </p>
-            <a href="#">Learn more</a>
-          </div>
-
-          <div>
-            <i class="fa-brands fa-app-store"></i>
-            <h2>Web Design</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Praesentium, sit labore itaque omnis obcaecati voluptates dolores
-              commodi ex architecto sapiente alias minima quisquam perferendis
-              numquam amet similique? Consequatur, sapiente aut!
-            </p>
-            <a href="#">Learn more</a>
+      <main class="py-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card">
+                <div class="card-body">
+                  <h2 class="card-title">Web Design</h2>
+                  <p class="card-text">
+                    Our expert team creates stunning and user-friendly websites
+                    tailored to your business needs.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <div class="card-body">
+                  <h2 class="card-title">Web Development</h2>
+                  <p class="card-text">
+                    We develop custom web applications and solutions that meet
+                    your specific requirements and business goals.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card">
+                <div class="card-body">
+                  <h2 class="card-title">Video Editing</h2>
+                  <p class="card-text">
+                    Our video editing services include professional editing,
+                    color grading, and visual effects to make your videos stand
+                    out.
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      </main>
     </div>
 
     <!-- -- portfolio -- -->

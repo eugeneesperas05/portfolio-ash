@@ -1,1 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container h-75">
+      <div class="row">
+        <div class="col-12">
+          <div class="row" style="height: 45vh"></div>
+        </div>
+        <div class="col-12">
+          <div class="row" style="height: 45vh">
+            <div class="col-3"></div>
+            <div class="col-4"></div>
+            <div class="col-5">
+              <!-- Services Cards -->
+              <div class="row services-container">
+                <!-- Dynamically added services cards will appear here -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="row"></div>
+        </div>
+      </div>
+    </div>
 
+    <!-- Pagination -->
+    <nav
+      aria-label="Page navigation"
+      class="pagination-container d-flex justify-content-center"
+    >
+      <ul class="pagination">
+        <li class="page-item disabled">
+          <a class="page-link" href="#" tabindex="-1" aria-disabled="true"
+            >Previous</a
+          >
+        </li>
+        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+          <a class="page-link" href="#">Next</a>
+        </li>
+      </ul>
+    </nav>
+    <script>
+      const services = [
+        {
+          title: "Web Design",
+          description: "Professional web design services",
+        },
+        {
+          title: "Web Development",
+          description: "Custom web development solutions",
+        },
+        {
+          title: "Video Editing",
+          description: "Expert video editing services",
+        },
+        // Add more services as needed
+      ];
+
+      const servicesPerPage = 3;
+      let currentPage = 1;
+
+      // Function to display services for the current page
+      function displayServices() {
+        const servicesContainer = document.querySelector(".services-container");
+        servicesContainer.innerHTML = "";
+
+        const startIndex = (currentPage - 1) * servicesPerPage;
+        const endIndex = startIndex + servicesPerPage;
+
+        for (let i = startIndex; i < Math.min(endIndex, services.length); i++) {
+          const service = services[i];
+          const serviceCard = `
+      <div class="col mb-4">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">${service.title}</h5>
+            <p class="card-text">${service.description}</p>
+          </div>
+        </div>
+      </div>
+    `;
+          servicesContainer.innerHTML += serviceCard;
+        }
+      }
+
+      // Function to handle pagination
+      function handlePagination() {
+        const paginationContainer = document.querySelector(
+          ".pagination-container"
+        );
+        if (window.innerWidth <= 765 && services.length > servicesPerPage) {
+          paginationContainer.style.display = "block";
+        } else {
+          paginationContainer.style.display = "none";
+        }
+      }
+
+      // Event listener for window resize
+      window.addEventListener("resize", handlePagination);
+
+      // Initial setup
+      displayServices();
+      handlePagination();
+    </script>
+  </body>
+</html>

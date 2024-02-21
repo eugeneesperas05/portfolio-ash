@@ -138,9 +138,10 @@ cardData.map((item) => {
   const cardImg = document.createElement("img");
   const cardCol = document.createElement("div");
 
+  cardCol.classList.add("col-6");
   cardCol.classList.add("col-lg-3");
-  cardCol.classList.add("col-md-3");
-  cardCol.classList.add("col-sm-6");
+  cardCol.classList.add("col-md-4");
+  cardCol.classList.add("col-sm-4");
   cardCol.classList.add("col-portfolio");
 
   card.classList.add("card");
