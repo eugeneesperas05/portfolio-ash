@@ -680,3 +680,27 @@ form .btn2 {
     height: 130vh;
   }
 }
+
+@media screen and (max-width: 445px) {
+  .home-contact-btn {
+    margin-top: -35px;
+    margin-left: 10px;
+  }
+
+  .about-p {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  #services-page {
+    margin-top: -80px;
+  }
+
+  #portfolio-page {
+    padding-top: 650px;
+  }
+
+  #contact-page {
+    padding-top: 300px;
+    height: 110vh;
+  }
+}
