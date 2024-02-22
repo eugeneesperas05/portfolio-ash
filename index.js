@@ -129,7 +129,7 @@ cardData.map((item) => {
   const cardCol = document.createElement("div");
 
   cardCol.classList.add("col-6");
-  cardCol.classList.add("col-lg-3");
+  cardCol.classList.add("col-lg-4");
   cardCol.classList.add("col-md-4");
   cardCol.classList.add("col-sm-4");
   cardCol.classList.add("col-portfolio");
@@ -138,6 +138,7 @@ cardData.map((item) => {
   card.classList.add("card-portfolio");
   cardBody.classList.add("card-body");
   cardImg.classList.add("card-img-top");
+  cardImg.style.height = "250px";
   cardImg.src = `images/${item.src}`;
 
   cardBody.innerHTML = `<h5 class="card-title">

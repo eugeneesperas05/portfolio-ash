@@ -738,3 +738,9 @@ form .btn2 {
     margin-top: 60px;
   }
 }
+
+@media screen and (max-width: 435px) {
+  .row-home {
+    margin-top: 60px;
+  }
+}
