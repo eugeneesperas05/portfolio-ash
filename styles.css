@@ -295,6 +295,16 @@ body {
   font-size: 1.1rem;
 }
 
+.xp-a {
+  color: #05aed5;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.xp-a:hover {
+  color: #82cfe0;
+}
+
 .tab-contents {
   display: none;
 }
@@ -329,9 +339,9 @@ body {
 }
 
 .carousel-item img {
-  max-height: 300px; /* Adjust the maximum height of the images */
-  width: auto; /* Maintain aspect ratio */
-  margin: 0 auto; /* Center the images horizontally */
+  max-height: 300px;
+  width: auto;
+  margin: 0 auto;
 }
 
 #carousel-container {
