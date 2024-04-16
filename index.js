@@ -70,17 +70,17 @@ const openTab = (tabName) => {
 };
 
 // --for my kodego button to show certifate---
-const certificateBtn = document.querySelector("#certificate-btn");
-const certiContainer = document.querySelector(".cert-container");
-certificateBtn.addEventListener("click", () => {
-  certiContainer.style.display = "block";
-});
+// const certificateBtn = document.querySelector("#certificate-btn");
+// const certiContainer = document.querySelector(".cert-container");
+// certificateBtn.addEventListener("click", () => {
+//   certiContainer.style.display = "block";
+// });
 
-const closeBtn = document.querySelector("#close");
+// const closeBtn = document.querySelector("#close");
 
-closeBtn.addEventListener("click", () => {
-  certiContainer.style.display = "none";
-});
+// closeBtn.addEventListener("click", () => {
+//   certiContainer.style.display = "none";
+// });
 
 // end of about me tabs for skills
 
